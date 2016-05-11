@@ -11,7 +11,7 @@ def toggler():
             continue
         if cmd == lp.RETRANSMIT:
             print ('got error, resending')
-            update_lights()
+            lp.update_lights()
             continue
         cmd = ord(cmd)
 
