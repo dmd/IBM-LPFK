@@ -24,16 +24,16 @@ def wamole(moles):
         if lp.keys[cmd] == 0:
             # do nothing if we whacked a non-existent mole
             continue
-        else:
-            # choose a new light that isn't on
-            choices = sample(range(32), moles + 2)
-            for k in choices:
-                if lp.keys[k] == 0:
-                    lp.keys[k] = 1
-                    break
 
-            # and whack the current mole
-            lp.keys[cmd] = 0
+        # choose a new light that isn't on
+        choices = sample(range(32), moles + 2)
+        for k in choices:
+            if lp.keys[k] == 0:
+                lp.keys[k] = 1
+                break
+
+        # and whack the current mole
+        lp.keys[cmd] = 0
 
         lp.update_lights()
 
