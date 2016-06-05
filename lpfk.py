@@ -20,6 +20,7 @@ class lpfk:
 
     def __init__(self):
         self.keys = [0] * 32
+        self.history = [0] * 5
         self.sp = serial.Serial(port=self.PORT,
                            baudrate=9600,
                            bytesize=serial.EIGHTBITS,
@@ -50,6 +51,16 @@ class lpfk:
         self.sp.write(b'\x08')
         sleep(0.1)
 
+    def quitcheck(self, cmd):
+        # did we get the sentinel sequence?
+        self.history.append(cmd)
+        self.history.pop(0)
+        if self.history == [0,1,2,3,31]:
+            self.keys = [0] * 32
+            self.update_lights()
+            return True
+        return False
+            
 
     def update_lights(self, retries=0):
         self.sp.write(self.SET)

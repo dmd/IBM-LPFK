@@ -14,6 +14,8 @@ def toggler():
             lp.update_lights()
             continue
         cmd = ord(cmd)
+        if lp.quitcheck(cmd):
+            break
 
         lp.keys[cmd] ^= 1
         print('button {} set to {}'.format(cmd, lp.keys[cmd]))

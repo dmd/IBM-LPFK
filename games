@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while true
+do
+	./blackout.py
+	./toggler.py
+	./wamole.py
+done

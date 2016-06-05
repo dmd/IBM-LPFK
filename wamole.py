@@ -21,6 +21,9 @@ def wamole(moles):
             continue
         cmd = ord(cmd)
 
+        if lp.quitcheck(cmd):
+            break
+
         if lp.keys[cmd] == 0:
             # do nothing if we whacked a non-existent mole
             continue
