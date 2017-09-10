@@ -2,7 +2,7 @@
 
 while true
 do
-	./blackout.py
 	./toggler.py
+	./blackout.py
 	./wamole.py
 done
