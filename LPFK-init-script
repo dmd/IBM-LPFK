@@ -1,0 +1,34 @@
+#! /bin/sh
+# /etc/init.d/LPFK
+
+### BEGIN INIT INFO
+# Provides:          LPFK
+# Required-Start:
+# Required-Stop:
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: start LPFK
+### END INIT INFO
+
+# If you want a command to always run, put it here
+
+# Carry out specific functions when asked to by the system
+case "$1" in
+  start)
+    echo "Starting LPFK"
+    # run application you want to start
+    cd /home/pi/IBM-LPFK
+    ./games
+    ;;
+  stop)
+    echo "Stopping LPFK"
+    # kill application you want to stop
+    pkill LPFK
+    ;;
+  *)
+    echo "Usage: /etc/init.d/LPFK {start|stop}"
+    exit 1
+    ;;
+esac
+
+exit 0
