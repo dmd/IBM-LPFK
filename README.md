@@ -14,3 +14,5 @@ To quit a game when running `games` you enter the ["sentinel sequence" 0,1,2,3,3
 ### See Also
 
 Phil Pemberton has [written a driver for the LPFK](https://wiki.philpem.me.uk/code/liblpfk).
+
+![IMG_6009](https://user-images.githubusercontent.com/41439/150862696-934adcca-abfb-4889-ade0-4b677693231d.jpeg)
