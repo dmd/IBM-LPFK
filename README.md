@@ -2,7 +2,7 @@
 Some games and a bare bones Python driver for the [IBM LPFK](https://www.brutman.com/IBM_LPFK/IBM_LPFK.html).
 
 Sorry, I haven't really documented this.
-It's basically a series of games I wrote for my (then, in 2016 or so) 2 year old to play on the LPFK,
+It's basically a series of games I wrote for my (then, in 2016 or so) young children to play on the LPFK,
 like:
 
 * `wamole` - wack-a-mole, turns some lights on, every time you turn one off, another turns on
